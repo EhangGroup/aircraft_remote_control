@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"remote_test\startup_stm32f103xe.o"
+"remote_test\main.o"
+"remote_test\gpio.o"
+"remote_test\tim.o"
+"remote_test\usart.o"
+"remote_test\stm32f1xx_it.o"
+"remote_test\stm32f1xx_hal_msp.o"
+"remote_test\stm32f1xx_hal_gpio_ex.o"
+"remote_test\stm32f1xx_hal_tim.o"
+"remote_test\stm32f1xx_hal_tim_ex.o"
+"remote_test\stm32f1xx_hal_uart.o"
+"remote_test\stm32f1xx_hal.o"
+"remote_test\stm32f1xx_hal_rcc.o"
+"remote_test\stm32f1xx_hal_rcc_ex.o"
+"remote_test\stm32f1xx_hal_gpio.o"
+"remote_test\stm32f1xx_hal_dma.o"
+"remote_test\stm32f1xx_hal_cortex.o"
+"remote_test\stm32f1xx_hal_pwr.o"
+"remote_test\stm32f1xx_hal_flash.o"
+"remote_test\stm32f1xx_hal_flash_ex.o"
+"remote_test\stm32f1xx_hal_exti.o"
+"remote_test\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "remote_test\remote_test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "remote_test.map" -o remote_test\remote_test.axf
